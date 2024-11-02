@@ -35,3 +35,29 @@ for (let i = 1; i < count; i++) {
 for (let i = 1; i <= count; i++) {
     rows.push(padRow(i, count));
 }
+
+// step 82
+
+if ("") {
+} else if(5 < 10) {
+    console.log("5 is less than 10");
+}
+
+// step 83
+
+if ("") {
+    console.log("Condition is true");
+} else if (5 > 10) {
+    console.log("5 is less than 10");
+} else {
+    console.log("This is the else block");
+}
+
+// step 88
+
+while (continueLoop) {
+    done++;
+    if(done == count){
+
+    }
+}
