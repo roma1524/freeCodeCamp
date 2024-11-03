@@ -107,3 +107,69 @@ for (let i = 1; i <= count; i++) {
         rows.push(padRow(i, count));
     }
 }
+
+// Review JavaScript Fundamentals by Building a Gradebook App
+// step 1
+
+function getAverage(scores) {
+    const allScore = scores.reduce((acc, item) => {
+        return acc + item
+    }, 0)
+
+    return allScore / (scores.length);
+}
+
+console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
+console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));
+
+// step 2
+
+function getGrade(score) {
+    if(score === 100) {
+        return "A++";
+    } else if( score >= 90 & score <= 99) {
+        return "A";
+    } else if( score >= 80 & score <= 89) {
+        return "B";
+    } else if( score >= 70 & score <= 79) {
+        return "C";
+    } else if( score >= 60 & score <= 69) {
+        return "D";
+    } else if( score >= 0 & score <= 59) {
+        return "F";
+    }
+}
+
+console.log(getGrade(96));
+console.log(getGrade(82));
+console.log(getGrade(56));
+
+// step 3
+
+function hasPassingGrade(score) {
+    if(score <= 56) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+console.log(hasPassingGrade(100));
+console.log(hasPassingGrade(53));
+console.log(hasPassingGrade(87));
+
+// step 4
+
+function studentMsg(totalScores, studentScore) {
+    let msg = '';
+
+    if(hasPassingGrade(studentScore)) {
+        msg = `Class average: ${getAverage(totalScores)}. Your grade: ${getGrade(studentScore)}. You passed the course.`
+    } else {
+        msg = `Class average: ${getAverage(totalScores)}. Your grade: ${getGrade(studentScore)}. You failed the course.`
+    }
+
+    return msg;
+}
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
