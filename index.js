@@ -61,3 +61,49 @@ while (continueLoop) {
 
     }
 }
+
+// step 102
+
+for (let i = count; i > 0; i = i - 1) {
+    rows.push(padRow(i, count));
+}
+
+// step 103
+
+for (let i = count; i > 0; i -= 1) {
+    rows.push(padRow(i, count));
+}
+
+// step 104
+
+for (let i = count; i > 0; i--) {
+    rows.push(padRow(i, count));
+}
+
+// step 108
+
+const numbers = [1, 2, 3];
+const shifted = numbers.shift();
+console.log(shifted);
+
+const unshifted = numbers.unshift(5);
+console.log(unshifted);
+console.log(numbers);
+
+// step 113
+
+for (let i = 1; i <= count; i++) {
+    if(inverted) {
+        rows.unshift(padRow(i, count));
+    }
+}
+
+// step 116
+
+for (let i = 1; i <= count; i++) {
+    if (inverted) {
+        rows.unshift(padRow(i, count));
+    } else {
+        rows.push(padRow(i, count));
+    }
+}
