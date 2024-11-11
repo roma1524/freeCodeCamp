@@ -173,3 +173,17 @@ function studentMsg(totalScores, studentScore) {
     return msg;
 }
 console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
+
+// Learn Basic JavaScript by Building a Role Playing Game
+
+function buyHealth() {
+
+    if(gold >= 10) {
+
+        gold -= 10;
+        health += 10;
+        goldText.innerText = gold;
+        healthText.innerText = health;
+
+    }
+}
